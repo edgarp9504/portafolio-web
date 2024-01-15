@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import NavigatoBar from '../components/NavigatoBar.astro';
+import LinkedInIcon from "../components/icons/Linkedin.astro"
+import GitHubIcon from "../components/icons/Github.astro"
+import CardBlog from "../components/Cardblog.astro"
+
+// icons
+import Button from '../components/Button.astro';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<Layout title="Edgar Pérez">
+	<main>
+		
+		
+		
+		<section class=" h-screen">
+			<div class="flex items-center justify-center flex-col py-8 h-full">
+				<h1 class="text-7xl font-bold text-center"> Hola! <br>Soy Edgar Pérez</h1>
+				<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black m-5 text-center">Data Enginner +5 años trabajando con datos. Cancún México. Especializandome en arquitectura Azure cloud</h2>
+				<nav class="flex">
+					<LinkedInIcon class="size-4 md:size-7 m-2"/>
+					<GitHubIcon class="size-4 md:size-7 m-2"/>
+				</nav>
+			</div>
+		</section>
+
+		<!-- about me -->
+		<section>
+			<div class="flex  lg:flex-row flex-col py-4 lg:px-[15rem] px-[3rem]">
+				<div class="flex justify-center m-3">
+					<figure class="">
+						<img src="/edgar.webp" alt="" width= "80%" class="rounded-t-3xl lg:w-[250px] w-[150px]">
+					</figure>
+				</div>
+				<div class="flex flex-col justify-evenly fit-content">
+					<h3 class="text-4xl font-bold text-center">Sobre mi experiencia</h3>
+					<p class="lg:text-xl">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- certificated -->
+		<section>
+			<h3 class="text-4xl font-bold text-center m-[3rem]">Certificados</h3>
+			<div class="flex justify-center">
+				<a href="https://www.credential.net/ec03aa1c-d74e-47c7-b0aa-f35809bebf2e#gs.3nwo6y" class="hover:scale-105 transition-transform duration-300 ease-in-out">
+				  <img class="align-middle" src="/databricks.webp" alt="">
+				</a>
+			  </div>
+			  
+		</section>
+
+		<!-- tools -->
+		<section>
+			<div class="icons-techs">
+				<h3 class="text-4xl font-bold text-center py-[3rem] lg:py-[2rem]">Algunas cosas que domino</h3>
+
+				<div class="py-[2rem] lg:py-[8rem] flex lg:flex-row flex-col justify-around items-center h-max">
+					<img class="m-3 lg:m-0" src="/tableau.webp" width="200px">
+					<img class="m-3 lg:m-0" src="/power-bi.webp" width="200px">
+					<img class="m-3 lg:m-0" src="/azure.webp" width="200px">
+					<!-- <img src="/tableau.webp" width="100px"> -->
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class=" h-[1000px]">
+			<h3 class="text-4xl font-bold text-center" style="">Experiencia</h3>
+			<div class="container">
+				<div class="floating-line"></div>
+
+			</div>
+			
+			<div class="icons_enter">
+
+			</div>
+			  
+
+
+		</section> -->
+
+		<section>
+			<div class="flex flex-col items-center py-4">
+				<h3 class="text-4xl font-bold" style="padding-bottom: 50px;">Blog</h3>
+				
+				<div class="flex lg:flex-row flex-col ">
+
+						{allPosts.map((post) => <CardBlog title={post.frontmatter.title}/>)}
+						
+
+
+				</div>
+
+				<Button />
+				  
+			</div>
+
+		</section>
+
+
+	</main>
+</Layout>
+
+<style>
+	.fit-content {
+	width: -moz-fit-content;
+	width: fit-content;
+	}
+
+	.custom-rounded-top {
+	border-radius: 200px 200px 0 0;
+	}
+
+	.icons-techs{
+		background-color: #f5f5f5;
+
+	}
+
+</style>
