@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import NavigatoBar from '../components/NavigatoBar.astro';
 import LinkedInIcon from "../components/icons/Linkedin.astro"
 import GitHubIcon from "../components/icons/Github.astro"
 import CardBlog from "../components/Cardblog.astro"
@@ -19,7 +17,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		
 		<section class=" h-screen">
 			<div class="flex items-center justify-center flex-col py-8 h-full">
-				<h1 class="text-7xl font-bold text-center"> Hola! <br>Soy Edgar Pérez</h1>
+				<h1 class="lg:text-7xl text-5xl font-bold text-center"> Hola! <br>Soy Edgar Pérez</h1>
 				<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black m-5 text-center">Data Enginner +5 años trabajando con datos. Cancún México. Especializandome en arquitectura Azure cloud</h2>
 				<nav class="flex">
 					<LinkedInIcon class="size-4 md:size-7 m-2"/>
@@ -30,21 +28,26 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 
 		<!-- about me -->
 		<section>
-			<div class="flex  lg:flex-row flex-col py-4 lg:px-[15rem] px-[3rem]">
+			<div class="flex  lg:flex-row flex-col justify-center">
 				<div class="flex justify-center m-3">
 					<figure class="">
-						<img src="/edgar.webp" alt="" width= "80%" class="rounded-t-3xl lg:w-[250px] w-[150px]">
+						<img src="/edgar.webp" alt="" width= "" class="rounded-t-3xl lg:w-[200px] w-[150px]">
 					</figure>
 				</div>
 				<div class="flex flex-col justify-evenly fit-content">
-					<h3 class="text-4xl font-bold text-center">Sobre mi experiencia</h3>
-					<p class="lg:text-xl">
-						Hola, soy Edgar Pérez, originario de Cancún, México. Actualmente, me desempeño como ingeniero de datos con amplia experiencia en diversas áreas. Me especializo en la creación de dashboards utilizando herramientas como <span>Power BI</span> y <span>Tableau</span>. Además, tengo habilidades sólidas en el modelado y manipulación de datos, trabajando con bases de datos como <span>SQL Server, MySQL y Oracle</span>.
+					<h3 class="text-4xl font-bold text-center lg:text-left">Sobre mi experiencia</h3>
+					<div class="flex flex-col lg:w-[30rem] text-center m-6 lg:m-0 lg:text-left">
 
-						Mi experiencia también abarca el desarrollo de procesos ETL, donde he utilizado herramientas como <span>SSIS y Talend</span> para asegurar la eficiente extracción, transformación y carga de datos. En el ámbito de la programación, he trabajado con <span>Python</span> para llevar a cabo tareas de manipulación, extracción y limpieza de datos de manera efectiva.
+							<p class="lg:text-base text-sm">
+								Soy<span class="font-bold"> ingeniero de datos</span> de Cancún, México. Especializado en dashboards con <span class="font-bold">Power BI y Tableau</span>, manejo datos con <span class="font-bold">SQL Server, MySQL, Oracle </span> y tengo experiencia en ETL con SSIS y Talend.
+							</p>
 
-						Estoy comprometido con la excelencia en mi trabajo y siempre estoy buscando oportunidades para aplicar mis habilidades y conocimientos en el campo de la ingeniería de datos.
-					</p>
+						<br>
+						<p class="lg:text-base text-sm">
+							Trabajo con <span class="font-bold">Python</span> para extracción y limpieza de datos.Busco oportunidades desafiantes para aplicar mis habilidades.
+						</p>
+
+					</div>
 				</div>
 			</div>
 		</section>
