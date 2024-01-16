@@ -98,7 +98,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 				
 				<div class="flex lg:flex-row flex-col ">
 
-						{allPosts.map((post) => <CardBlog title={post.frontmatter.title}/>)}
+						{allPosts.map((post) => <CardBlog title={post.frontmatter.title} description={post.frontmatter.description} url={post.url}/>)}
 						
 
 
