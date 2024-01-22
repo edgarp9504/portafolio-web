@@ -1,9 +1,59 @@
 ---
-import Layout from "./Blog.astro";
+// import type { CollectionEntry } from 'astro:content';
+import type {MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+    title:string;
+}>
+
+const {title} = Astro.props.frontmatter;
+import Footer from '../components/Footer.astro';
+import NavigatoBar from '../components/NavigatoBar.astro';
 
 
+// type Props = CollectionEntry<'blog'>['data'];
+
+// const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<Layout title="Blog">
-    <slot />
-</Layout>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <title>Blog: {title}</title>
+</head>
+<body>
+    <NavigatoBar />
+    <article class="main__article">
+        <div class="prose">
+            <h1>{title}</h1>
+            <slot />
+        </div>
+    </article>
+    <Footer />
+</body>
+</html>
+
+<!-- <Layout title="Blog">
+
+</Layout> -->
+
+<style>
+    h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    p{
+        color: brown;
+        margin-bottom: 2rem;
+    }
+
+    .main__article{
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+    }
+</style>

@@ -1,12 +1,11 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/Blog.astro
 title: 'El Data Warehouse: Tu Aliado Estratégico para la Gestión de Datos'
 description: '¿Alguna vez te has preguntado qué es exactamente un Data Warehouse y para qué se utiliza?'
 pubDate: 'Jul 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
 url: '.../firts-post'
 ---
-
 
 En la era actual, las empresas generan y acumulan ingentes cantidades de datos a diario. A medida que esta acumulación de datos crece, surge una nueva imperante pregunta: ¿Cómo podemos aprovechar al máximo esta invaluable fuente de información? ¿Está optimizado nuestro almacenamiento de datos? Y, ¿cómo podemos reducir el volumen de nuestras bases de datos sin sacrificar su integridad?
 La solución a estas preguntas candentes viene de la mano de una herramienta que se ha vuelto muy popular en tiempos recientes: el Data Warehouse. Pero, ¿en qué consiste realmente un Data Warehouse?
