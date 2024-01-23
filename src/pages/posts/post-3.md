@@ -1,8 +1,8 @@
 ---
-# layout: ../../layouts/MarkdownPostLayout.astro
-title: My Fourth Blog Post
+layout: ../../layouts/Blog.astro
+title: 'SSIS: Mi primer ETL'
 author: Astro Learner
-description: "This post will show up on its own!"
+description: "Crearas tu primer ETL usando SSIS, manipularas los datos"
 image:
     url: "https://docs.astro.build/default-og-image.png"
     alt: "The word astro against an illustration of planets and stars."

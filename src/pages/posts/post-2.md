@@ -1,6 +1,7 @@
 ---
-title: 'Second post'
-description: 'Lorem ipsum dolor sit amet'
+layout: ../../layouts/Blog.astro
+title: 'SSIS: Mi primera conexion a CSV'
+description: 'Crearás tu primera conexion a CSV usando SSIS'
 pubDate: 'Jul 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
 ---

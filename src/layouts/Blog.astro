@@ -4,9 +4,10 @@ import type {MarkdownLayoutProps } from "astro";
 
 type Props = MarkdownLayoutProps<{
     title:string;
+    heroImage: string;
 }>
 
-const {title} = Astro.props.frontmatter;
+const {title,heroImage} = Astro.props.frontmatter;
 import Footer from '../components/Footer.astro';
 import NavigatoBar from '../components/NavigatoBar.astro';
 
@@ -23,17 +24,12 @@ import NavigatoBar from '../components/NavigatoBar.astro';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=}, initial-scale=1.0">
     <title>Blog: {title}</title>
-    <style>
-            .prose p{
-                color: brown;
-                margin-bottom: 2rem;
-            }
-    </style>
 </head>
 <body>
     <NavigatoBar />
     <article class="main__article">
         <div class="prose">
+            <img src={heroImage} width={1020} height={510}>
             <h1>{title}</h1>
             <slot />
         </div>
