@@ -23,6 +23,12 @@ import NavigatoBar from '../components/NavigatoBar.astro';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=}, initial-scale=1.0">
     <title>Blog: {title}</title>
+    <style>
+            .prose p{
+                color: brown;
+                margin-bottom: 2rem;
+            }
+    </style>
 </head>
 <body>
     <NavigatoBar />
@@ -36,18 +42,27 @@ import NavigatoBar from '../components/NavigatoBar.astro';
 </body>
 </html>
 
-<!-- <Layout title="Blog">
 
-</Layout> -->
-
-<style>
-    h1{
+<style is:global>
+    .main__article h1{
         font-size: 3rem;
         font-weight: bold;
+        margin: 0 0 1em 0;
     }
 
-    p{
-        color: brown;
+    .main__article h2{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0 0 1em 0;
+    }
+
+    .prose ul{
+        padding: .5rem;
+        list-style: disc;
+        margin: 1rem;
+    }
+
+    .prose p{
         margin-bottom: 2rem;
     }
 
@@ -56,4 +71,27 @@ import NavigatoBar from '../components/NavigatoBar.astro';
         max-width: calc(100% - 2em);
         margin: auto;
     }
+
+    @media (max-width: 425px) {
+        .main__article h1{
+            font-size: 2rem;
+        }
+        .main__article h2{
+            font-size: 1rem;
+        }
+        .prose p{
+            font-size:  .8rem;
+        }
+        .prose ul li{
+            font-size:  .8rem;
+        }
+
+        .main__article{
+            width: 720px;
+            max-width: calc(100% - 4em);
+            margin: auto;
+        }
+
+    }
+
 </style>
