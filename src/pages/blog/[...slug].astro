@@ -1,0 +1,18 @@
+<!-- ---
+import Blog from '../../layouts/Blog.astro';
+const allPosts = await Astro.glob('../content/blog/*.md');
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "astro" } },
+    { params: { tag: "successes" } },
+    { params: { tag: "community" } },
+    { params: { tag: "blogging" } },
+    { params: { tag: "setbacks" } },
+    { params: { tag: "learning in public" } },
+  ];
+}
+---
+
+<Blog >
+
+</Blog> -->
