@@ -66,7 +66,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		</section>
 
 		<!-- tools -->
-		<section>
+		<!-- <section>
 			<div class="icons-techs">
 				<h3 class="text-4xl font-bold text-center py-[3rem] lg:py-[2rem]">Algunas cosas que domino</h3>
 
@@ -74,7 +74,66 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 					<img class="m-3 lg:m-0" src="/tableau.webp" width="200px">
 					<img class="m-3 lg:m-0" src="/power-bi.webp" width="200px">
 					<img class="m-3 lg:m-0" src="/azure.webp" width="200px">
-					<!-- <img src="/tableau.webp" width="100px"> -->
+					<img src="/tableau.webp" width="100px">
+				</div>
+			</div>
+		</section> -->
+
+		<section class="experience">
+			<div class="container-experience">
+
+				<div>
+					<div class="card-skills">
+						<h4>Creación de Dashboard interactivos</h4>
+						<ul class="list">
+							<li>Diseño centrado en el usuario</li>
+							<li>Visualización de datos efectiva</li>
+							<li>Desempeño y mantenimiento</li>
+						</ul>
+						
+					</div>
+					<div class="card-skills">
+						<h4>Manejo de base de datos</h4>
+						<ul class="list">
+							<li>Consultas y manipulación de datos</li>
+							<li>Optimización de consultas</li>
+							<li>Monitoreo de rendimiento</li>
+						</ul>
+					</div>
+					<div class="card-skills">
+						<h4>Creación de arquitecturas de datos Azure Cloud</h4>
+						<ul class="list">
+							<li>Selección de servicios y herramientas adecuadas</li>
+							<li>Diseño de arquitectura escalable y segura</li>
+							<li>Integración y automatización</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<div class="card-skills">
+						<h4>Creación de pipipelines y ETL</h4>
+						<ul class="list">
+							<li>Planificación del Flujo de Trabajo</li>
+							<li>Optimización del Rendimiento</li>
+							<li>Gestión de la Calidad de los Datos</li>
+						</ul>
+					</div>
+					<div class="card-skills">
+						<h4>Modelado de datos</h4>
+						<ul class="list">
+							<li>Normalización de bases de datos</li>
+							<li>Modelado dimensional y esquemas de estrella</li>
+							<li>Optimización de consultas</li>
+						</ul>
+					</div>
+					<div class="card-skills">
+						<h4>Analisis de datos con SQL o Python</h4>
+						<ul class="list">
+							<li>Manipulación de datos, consultas de datos</li>
+							<li>Limpieza de datos, eliminación de duplicados</li>
+							<li>Análisis exploratorio de datos (EDA)</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -136,6 +195,32 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 	.icons-techs{
 		background-color: #f5f5f5;
 
+	}
+
+	.experience{
+		background: black;
+		color: white;
+		padding: 8rem;
+	}
+	.container-experience{
+		display: flex;
+		justify-content: space-around;
+    	align-items: center;
+	}
+
+	h4{
+		font-size: large;
+		font-weight: bold;
+	}
+
+	.list{
+		padding-left: 1.8rem;
+		list-style-type: circle; 
+  		color: white; 
+	}
+
+	.card-skills{
+		padding-bottom: 1rem;
 	}
 
 </style>
