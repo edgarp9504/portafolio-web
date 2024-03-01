@@ -1,0 +1,60 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description } = Astro.props;
+---
+
+
+<meta charset="utf-8" />
+<meta name="description" content="Astro description" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon"  href="/icon.ico" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div>
+
+<!-- Google Console -->
+<meta name="google-site-verification" content="Mc77IhZIC_eltxulEfTk6Eziw_Stvow88YX0ATdNKhM" />
+
+
+<!-- Global Metadata -->
+<!-- <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} /> -->
+
+<!-- Font preloads -->
+<!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
+<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin /> -->
+
+<!-- Canonical URL -->
+<!-- <link rel="canonical" href={canonicalURL} /> -->
+
+<!-- Primary Meta Tags -->
+<!-- <title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} /> -->
+
+<!-- Open Graph / Facebook -->
+<!-- <meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} /> -->
+
+<!-- Twitter -->
+<!-- <meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+
